@@ -109,14 +109,10 @@ function App() {
     if (calculatorState === 'on') {
 
       var check = character.split(operation);
+      
+      var lastOperation = ((operation === '') ? character : check[check.length - 1]);
 
-      if (operation === '') {
-        var lastOperation = character;
-      } else {
-        var lastOperation = check[check.length - 1];
-      }
-
-      if (lastOperation.indexOf(".") != -1) {
+      if (lastOperation.indexOf(".") !== -1) {
 
       } else {
         setCharacter(character + '.')
