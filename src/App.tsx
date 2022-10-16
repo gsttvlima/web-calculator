@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Container, Row, Col } from 'reactstrap';
-import { Card, CardBody, CardTitle } from 'reactstrap';
+
 import { Button, Input } from 'reactstrap';
 
 function App() {
