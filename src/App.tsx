@@ -22,9 +22,6 @@ function App() {
 
   const [message, setMessage] = useState('');
 
-  const [buttonOn, setButtonOn] = useState('d-block w-100');
-  const [buttonOff, setButtonOff] = useState('d-none w-100');
-
   const [calculatorState, setCalculatorState] = useState('off');
 
   function turnOff() {
@@ -97,9 +94,8 @@ function App() {
 
     if (calculatorState === 'on') {
 
-      var replaced = character.replaceAll('÷', '/');
-      var replaced = replaced.replaceAll('x', '*');
-
+      var replaced = character.replaceAll('÷', '/').replaceAll('x', '*');
+      
       var calculate = nerdamer(replaced);
 
       setCharacter(calculate)
