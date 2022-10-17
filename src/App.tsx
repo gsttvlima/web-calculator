@@ -26,15 +26,20 @@ function App() {
 
   function turnOff() {
 
+
     if (calculatorState === 'on') {
 
       setMessage('')
       addCharacter('')
-      setCalculatorState('off')
 
       setMessage('Preparing to sleep')
+
       setTimeout(() => {
+
+        setCalculatorState('off')
+        
         setMessage('Preparing to sleep.')
+        
         setTimeout(() => {
           setMessage('Preparing to sleep..')
           setTimeout(() => {
@@ -46,6 +51,8 @@ function App() {
 
               setTimeout(() => {
 
+                
+                
                 setMessage('')
 
               }, 800)
