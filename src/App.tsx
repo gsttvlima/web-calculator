@@ -36,13 +36,13 @@ function App() {
 
       var newValue = one;
 
-      if(one === 's' || one === 'q' || one === 'r' || one === 't' || one === '(' && oneByOne[i-1] === 't'){
+      if((one === 's') || (one === 'q') || (one === 'r') || (one === 't') || (one === '(' && oneByOne[i-1] === 't')){
         sqrt = true
       } 
 
       if(sqrt === true){
 
-        if(one === '+' || one === '-' || one === '/' || one === '*'){
+        if((one === '+') || (one === '-') || (one === '/') || (one === '*')){
 
           newValue = ')'+one
           sqrt = false
