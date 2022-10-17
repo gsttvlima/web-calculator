@@ -1,5 +1,5 @@
 
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Row, Col } from 'reactstrap';
 import { Card, CardBody, CardTitle } from 'reactstrap';
@@ -16,7 +16,7 @@ require('nerdamer/Extra');
 
 function App() {
 
-  const [character, setCharacter] = useState('');
+  const [character, addCharacter] = useState('');
   const [display, setDisplay] = useState('');
   const [operation, setOperation] = useState('');
 
@@ -29,7 +29,7 @@ function App() {
     if (calculatorState === 'on') {
 
       setMessage('')
-      setCharacter('')
+      addCharacter('')
       setMessage('Preparing to sleep')
       setTimeout(() => {
         setMessage('Preparing to sleep.')
@@ -62,15 +62,15 @@ function App() {
     if (calculatorState === 'off') {
 
       setMessage('')
-      setCharacter('')
+      addCharacter('')
 
-      setMessage('Initializing')
+      setMessage('Waking up')
       setTimeout(() => {
-        setMessage('Initializing.')
+        setMessage('Waking up.')
         setTimeout(() => {
-          setMessage('Initializing..')
+          setMessage('Waking up..')
           setTimeout(() => {
-            setMessage('Initializing...')
+            setMessage('Waking up...')
 
             setTimeout(() => {
 
@@ -95,28 +95,10 @@ function App() {
     if (calculatorState === 'on') {
 
       var replaced = character.replaceAll('÷', '/').replaceAll('x', '*');
-      
+
       var calculate = nerdamer(replaced);
 
-      setCharacter(calculate)
-
-    }
-
-  }
-
-  function addComma() {
-
-    if (calculatorState === 'on') {
-
-      var check = character.split(operation);
-      
-      var lastOperation = ((operation === '') ? character : check[check.length - 1]);
-
-      if (lastOperation.indexOf(".") !== -1) {
-
-      } else {
-        setCharacter(character + '.')
-      }
+      addCharacter(calculate)
 
     }
 
@@ -124,14 +106,14 @@ function App() {
 
   function clearAll() {
     setMessage('')
-    setCharacter('')
+    addCharacter('')
 
   }
 
   function deleteLast() {
     if (calculatorState === 'on') {
       setMessage('')
-      setCharacter(character.slice(0, -1))
+      addCharacter(character.slice(0, -1))
     }
   }
 
@@ -139,8 +121,38 @@ function App() {
   function updateDisplay() {
     if (calculatorState === 'on') {
 
+      if (typeof character == 'string') {
+
+        var values = character.split(operation);
+
+        var lastValue = values[values.length - 1]
+
+        values.splice(-1)
+
+        var penultimateValue = values[values.length - 1]
+
+        if (penultimateValue === '') {
+
+          addCharacter(character.substring(0, character.length - 1))
+
+        }
+
+        if(lastValue?.includes('.')){
+
+          var lastCharacter = lastValue.slice(-1)
+          var lastValueWithoutLastCharacter = character.substring(0, character.length - 1)
+
+          if(lastValueWithoutLastCharacter?.includes('.') && lastCharacter === '.'){
+            addCharacter(character.substring(0, character.length - 1))
+          }
+          
+        }
+        
+
+      }
 
       setDisplay(character)
+
 
     }
 
@@ -194,39 +206,39 @@ function App() {
 
               <Col xs="9">
                 <Row>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '7')}>7</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '8')}>8</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '9')}>9</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '7')}>7</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '8')}>8</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '9')}>9</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '4')}>4</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '5')}>5</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '6')}>6</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '4')}>4</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '5')}>5</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '6')}>6</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '1')}>1</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '2')}>2</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '3')}>3</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '1')}>1</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '2')}>2</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '3')}>3</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => setCharacter(character + '0')}>0</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addComma()}>.</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '0')}>0</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '.') }}>.</Button></Col>
                   <Col xs="4" className="p-0"><Button block color="light" onClick={() => getResult()}>=</Button></Col>
                 </Row>
               </Col>
 
               <Col xs="3">
                 <Row>
-                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { setCharacter(character + '÷'); setOperation('÷') }}>÷</Button></Col>
+                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '÷'); setOperation('÷') }}>÷</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { setCharacter(character + 'x'); setOperation('x') }}>x</Button></Col>
+                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + 'x'); setOperation('x') }}>x</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { setCharacter(character + '-'); setOperation('-') }}>-</Button></Col>
+                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '-'); setOperation('-') }}>-</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="12" className="p-0"><Button block color="primary" onClick={function () { setCharacter(character + '+'); setOperation('+') }}>+</Button></Col>
+                  <Col xs="12" className="p-0"><Button block color="primary" onClick={function () { addCharacter(character + '+'); setOperation('+') }}>+</Button></Col>
                 </Row>
               </Col>
 
