@@ -30,6 +30,8 @@ function App() {
 
       setMessage('')
       addCharacter('')
+      setCalculatorState('off')
+
       setMessage('Preparing to sleep')
       setTimeout(() => {
         setMessage('Preparing to sleep.')
