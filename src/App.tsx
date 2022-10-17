@@ -199,7 +199,7 @@ function App() {
 
 
               <Col xs="3" className="p-0"><Button block color="light" onClick={() => clearAll()}>c</Button></Col>
-              <Col xs="3" className="p-0"><Button block color="light" onClick={() => deleteLast()}>←</Button></Col>
+              <Col xs="3" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '÷'); setOperation('÷') }}>÷</Button></Col>
 
             </Row>
 
@@ -225,14 +225,12 @@ function App() {
                 <Row>
                   <Col xs="4" className="p-0"><Button block color="light" onClick={() => addCharacter(character + '0')}>0</Button></Col>
                   <Col xs="4" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '.') }}>.</Button></Col>
-                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => getResult()}>=</Button></Col>
+                  <Col xs="4" className="p-0"><Button block color="light" onClick={() => deleteLast()}>←</Button></Col>
                 </Row>
               </Col>
 
               <Col xs="3">
-                <Row>
-                  <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '÷'); setOperation('÷') }}>÷</Button></Col>
-                </Row>
+              
                 <Row>
                   <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + 'x'); setOperation('x') }}>x</Button></Col>
                 </Row>
@@ -240,8 +238,13 @@ function App() {
                   <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '-'); setOperation('-') }}>-</Button></Col>
                 </Row>
                 <Row>
-                  <Col xs="12" className="p-0"><Button block color="primary" onClick={function () { addCharacter(character + '+'); setOperation('+') }}>+</Button></Col>
+                <Col xs="12" className="p-0"><Button block color="light" onClick={function () { addCharacter(character + '+'); setOperation('+') }}>+</Button></Col>
+
                 </Row>
+                <Row>
+                  <Col xs="12" className="p-0"><Button block color="primary" onClick={() => getResult()}>=</Button></Col>
+                </Row>
+                
               </Col>
 
             </Row>
