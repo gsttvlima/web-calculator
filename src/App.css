@@ -24,12 +24,24 @@
   box-shadow: none;
 }
 
+#display{
+  height: 100%;
+}
 
+.card-title{
+  height: 15vh;
+}
 .card-body{
   margin: 0px !important;
   background-color: #212529 !important;
+  height: 40vh;
 }
-
+button{
+  height: 100%;
+}
+.line{
+  height: 12vh;
+}
 button{
   border-radius: 0px !important;
 }
@@ -41,8 +53,16 @@ button{
 
 #display{
   border-radius: 0px;
+  font-size: 29px;
 }
+#display::placeholder{
+  color: rgb(151, 151, 151);
+  font-size: 15px;
 
+}
+.calculator{
+  height: 80vh !important;
+}
 
 @media (max-width: 768px) { 
 
