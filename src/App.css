@@ -53,7 +53,7 @@ button{
 
 #display{
   border-radius: 0px;
-  font-size: 29px;
+  font-size: 30px;
 }
 #display::placeholder{
   color: rgb(151, 151, 151);
@@ -86,7 +86,7 @@ button{
   }
 
   .line{
-    height: 13.5vh;
+    height: 12.5vh;
   }
 
 
@@ -98,6 +98,7 @@ button{
 
   #display{
     height: 100%;
+    text-align: right;
   }
   #display::placeholder{
     color: rgb(151, 151, 151);
@@ -105,7 +106,7 @@ button{
 
   }
   #display{
-    font-size: 35px;
+    font-size: 56px;
   }
 
  }
