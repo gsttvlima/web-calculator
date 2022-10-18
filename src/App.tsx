@@ -160,7 +160,7 @@ function App() {
                 </Row>
                 <Row className="line">
                   <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={() => addCharacter(character + '0')}>0</Button></Col>
-                  <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={() => addCharacter(character + '000')}>00</Button></Col>
+                  <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={() => addCharacter(character + '00')}>00</Button></Col>
                   <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={function () { addCharacter(character + '.') }}>.</Button></Col>
                 </Row>
               </Col>
