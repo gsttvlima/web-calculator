@@ -1,14 +1,14 @@
-# Just a simple calculator made using React.js 
+# Simple calculator 
+
+Technologies used:
+- React
+- Next.js
+- Reactstrap
+- Nerdamer
 
 Screenshot:
 
-<img src="https://user-images.githubusercontent.com/115879524/196071253-993d6ce3-fce7-40ff-8eef-778aac125a72.jpeg" width="300" />
-
-How to use it:
-
-- Tap "on" to turn on the device
-- Do whatever you want
-- Tap "off" to turn off the device
+<img src="https://user-images.githubusercontent.com/115879524/196234177-39b9d7e8-ad0d-4025-9a6a-61cb7ab28310.png" width="300" />
 
 Demo: https://gsttvlima.github.io/react-calculator/
 
