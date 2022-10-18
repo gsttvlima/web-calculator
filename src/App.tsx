@@ -34,31 +34,22 @@ function App() {
     var oneByOne = replaced.split('')
     let sqrt = false
     var replaced_new = '';
-
     oneByOne.forEach(function (one, i) {
-
       var newValue = one;
-
       if ((one === 's') || (one === 'q') || (one === 'r') || (one === 't') || (one === '(' && oneByOne[i - 1] === 't')) {
         sqrt = true
       }
-
       if (sqrt === true) {
-
         if ((one === '+') || (one === '-') || (one === '/') || (one === '*')) {
           newValue = ')' + one
           sqrt = false
         }
-
         if (typeof oneByOne[i + 1] !== 'string') {
           newValue = one + ')'
           sqrt = false
         }
-
       }
-
       replaced_new = replaced_new + newValue
-
     })
 
     // Calculate using Nerdamer
