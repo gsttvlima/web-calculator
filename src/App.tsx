@@ -31,7 +31,6 @@ function App() {
     var replaced = character.replaceAll('÷', '/').replaceAll('x', '*').replaceAll('√', 'sqrt(')
 
     // The code below checks if there's a square root in the operation, because it's necessary to close the sqrt() tag
-
     var oneByOne = replaced.split('')
     let sqrt = false
     var replaced_new = '';
@@ -161,7 +160,7 @@ function App() {
                 </Row>
                 <Row className="line">
                   <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={() => addCharacter(character + '0')}>0</Button></Col>
-                  <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={() => addCharacter(character + '00')}>00</Button></Col>
+                  <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={() => addCharacter(character + '000')}>00</Button></Col>
                   <Col xs="4" className="p-0"><Button className="character" block color="dark" onClick={function () { addCharacter(character + '.') }}>.</Button></Col>
                 </Row>
               </Col>
