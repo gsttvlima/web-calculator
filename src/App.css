@@ -2,15 +2,12 @@
   background-color: rgb(29, 29, 29);
   height: 100vh;
 }
-
 .calculator{
   width: 18rem;
 }
-
 .text-bold{
   font-weight: 500;
 }
-
 .character:focus{
   background-color: #212529 !important;
 }
@@ -23,11 +20,9 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-
 #display{
   height: 100%;
 }
-
 .card-title{
   height: 15vh;
 }
@@ -45,12 +40,10 @@ button{
 button{
   border-radius: 0px !important;
 }
-
 .card{  background-color: #212529 !important;
 
   border-radius: 0px !important;
 }
-
 #display{
   border-radius: 0px;
   font-size: 30px;
@@ -64,18 +57,16 @@ button{
   height: 80vh !important;
 }
 
+/* Mobile */
 @media (max-width: 768px) { 
-
   .calculator{
     height: 100vh !important;
     width: 100vw;
   }
-
   button{
     height: 100%;
     font-size: 23px !important;
   }
-
   .card-body{
     padding: 0px !important;
     margin: 0px !important;
@@ -84,18 +75,14 @@ button{
     width: 100%;
     top: 20vh;
   }
-
   .line{
     height: 12.5vh;
   }
-
-
   .card-title{
     height: 20vh;
     position: fixed;
     width: 100%;
   }
-
   #display{
     height: 100%;
     text-align: right;
@@ -103,10 +90,8 @@ button{
   #display::placeholder{
     color: rgb(151, 151, 151);
     font-size: 20px;
-
   }
   #display{
     font-size: 56px;
   }
-
  }
