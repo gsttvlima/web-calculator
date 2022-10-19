@@ -55,6 +55,11 @@ function App() {
     // Calculate using Nerdamer
     var calculate = nerdamer(replaced_new)
 
+    // Keep calculating if the result is another operation
+    while(calculate?.includes('sqrt')){
+      var calculate = nerdamer(replaced_new)
+    }
+
     // Replaces all values ​​with the result of the operation
     addCharacter(calculate)
 
