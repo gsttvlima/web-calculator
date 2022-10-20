@@ -101,7 +101,7 @@ function App() {
     }
 
     // Update the 'display' usestate
-    setDisplay(character)
+    setDisplay(String(character).slice(0, 16))
 
   }
 
