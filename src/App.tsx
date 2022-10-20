@@ -53,7 +53,7 @@ function App() {
     })
 
     // Calculate using Nerdamer
-    let calculate = nerdamer(replaced_new)
+    let calculate = nerdamer(replaced_new).evaluate()
 
     // Replaces all values ​​with the result of the operation
     addCharacter(calculate)
