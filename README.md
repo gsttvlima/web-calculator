@@ -18,6 +18,8 @@
 
 https://gsttvlima.github.io/react-calculator/
 
+Also check my React Native version on https://github.com/gsttvlima/basic-calculator/
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/gsttvlima/react-calculator/issues).
