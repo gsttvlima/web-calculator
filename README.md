@@ -16,7 +16,7 @@
 
 ## 👀 Demo
 
-https://gsttvlima.github.io/react-calculator/
+https://gsttvlima.github.io/web-calculator/
 
 ## 🤝 Contributing
 
@@ -28,4 +28,4 @@ Give a ⭐️ if this project helped you!
 
 ##
 
-Also check my React Native version on https://github.com/gsttvlima/basic-calculator/
+Also check my React Native version on https://github.com/gsttvlima/mobile-calculator/
