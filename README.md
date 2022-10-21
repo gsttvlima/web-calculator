@@ -20,7 +20,7 @@ https://gsttvlima.github.io/web-calculator/
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/gsttvlima/react-calculator/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/gsttvlima/web-calculator/issues).
 
 ## ✨ Show your support
 
