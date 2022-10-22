@@ -28,4 +28,4 @@ Give a ⭐️ if this project helped you!
 
 ##
 
-Also check my React Native version on https://github.com/gsttvlima/mobile-calculator/
+Also check my React Native version on https://github.com/gsttvlima/android-ios-calculator/
