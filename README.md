@@ -16,7 +16,7 @@
 
 ## 👀 Demo
 
-https://gsttvlima.github.io/web-calculator/)
+https://gsttvlima.github.io/web-calculator/
 
 ## 🤝 Contributing
 
